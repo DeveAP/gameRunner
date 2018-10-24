@@ -12,6 +12,12 @@ public class SeguirPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position = new Vector3(player.position.x+separacion,transform.position.y,transform.position.z);
+        if (GameController.active_game)
+        {
+            move();
+        }
 	}
+    void move() {
+        transform.position = new Vector3(player.position.x + separacion, transform.position.y, transform.position.z);
+    }
 }

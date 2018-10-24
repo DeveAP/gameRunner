@@ -12,11 +12,18 @@ public class backgroundUmi : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        background.uvRect = new Rect(new Vector2(background.uvRect.x+velocity,background.uvRect.y),new Vector2(1,1) );
-	}
+
+    // Update is called once per frame
+    void Update() {
+        if (GameController.active_game)
+        {
+            moveGround();
+        }
+    }
+    void moveGround()
+    {
+        background.uvRect = new Rect(new Vector2(background.uvRect.x + velocity, background.uvRect.y), new Vector2(1, 1));
+    }
     void changeTexture() {
         background.texture = images[count];
         if (count == images.Length) {

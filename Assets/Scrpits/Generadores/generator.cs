@@ -7,6 +7,7 @@ public class generator : MonoBehaviour {
     public float tiempoMinimo = 1f;
     public float tiempoMaximo = 3f;
 
+
     // Use this for initialization
     void Start () {
         generar();
@@ -17,7 +18,10 @@ public class generator : MonoBehaviour {
 		
 	}
     void generar() {
-        Instantiate(obj[Random.Range(0,obj.Length)],transform.position, Quaternion.identity);
+        if (GameController.active_game)
+        {
+            Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+        }
         Invoke("generar", Random.Range(tiempoMinimo, tiempoMaximo));
     }
 }
