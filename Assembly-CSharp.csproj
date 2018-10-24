@@ -54,12 +54,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scrpits\Camara\backgroundUmi.cs" />
+     <Compile Include="Assets\Scrpits\Camara\SceneChanger.cs" />
      <Compile Include="Assets\Scrpits\Camara\SeguirPlayer.cs" />
      <Compile Include="Assets\Scrpits\Fondos\ChangeBackground.cs" />
      <Compile Include="Assets\Scrpits\GameController.cs" />
      <Compile Include="Assets\Scrpits\Generadores\destroyer.cs" />
      <Compile Include="Assets\Scrpits\Generadores\generator.cs" />
      <Compile Include="Assets\Scrpits\Interfaz\Puntaje.cs" />
+     <Compile Include="Assets\Scrpits\Player\kill.cs" />
      <Compile Include="Assets\Scrpits\Player\Running.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/tigre/Documents/Juegos Unity/GameRunner/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

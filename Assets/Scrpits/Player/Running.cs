@@ -7,7 +7,10 @@ public class Running : MonoBehaviour {
     public  float speed = 10f;
     public int fase = 3;
     public int contador;
+    public bool isGrounded = true;
+    public int suma = 0;
     public  float force_jump = 600;
+    public int tiempo;
 	// Use this for initialization
 	void Start () {
 		
@@ -19,6 +22,11 @@ public class Running : MonoBehaviour {
         {
             contador = Puntaje.puntaje_valor();
             runningPlayer(contador);
+
+        }
+        else
+        {
+            
         }
 	}
     public  void runningPlayer (int puntaje) {
@@ -29,7 +37,18 @@ public class Running : MonoBehaviour {
 
         }
         player.velocity = new Vector2(speed * (Time.deltaTime * fase) , player.velocity.y);
-        if (Input.GetMouseButtonDown(0)) { jump(); }
+        if (isGrounded)
+        {
+            if (Input.GetMouseButtonDown(0)) { jump(); isGrounded = false; }
+
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("piso"))
+        {
+            isGrounded = true;
+        }
     }
     public  void jump() {
         player.AddForce(Vector2.up * force_jump);

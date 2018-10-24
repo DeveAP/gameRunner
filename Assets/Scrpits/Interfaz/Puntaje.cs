@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Puntaje : MonoBehaviour {
     private int valor = 0;
+    public static int suma = 0;
     public Text puntaje;
 	// Use this for initialization
 	void Start () {
@@ -13,12 +14,19 @@ public class Puntaje : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        valor = puntaje_valor();
-        
-        puntaje.text = valor.ToString();
-	}
-    public static int puntaje_valor() {
-        int valor = Mathf.RoundToInt(Time.time * 50);
+        if (GameController.active_game)
+        {
+            suma++;
+            valor = puntaje_valor();
+            puntaje.text = valor.ToString();
+        }
+        else {
+            suma = 0;
+        }
+    }
+    public static int puntaje_valor( ) {
+
+        int valor = Mathf.RoundToInt(suma);
         return valor;
 
     }
