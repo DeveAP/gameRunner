@@ -20,9 +20,7 @@ public class Puntaje : MonoBehaviour {
             valor = puntaje_valor();
             puntaje.text = valor.ToString();
         }
-        else {
-            suma = 0;
-        }
+
     }
     public static int puntaje_valor( ) {
 

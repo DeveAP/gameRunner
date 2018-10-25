@@ -15,7 +15,7 @@ public class kill : MonoBehaviour {
 	}
     public void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Player")) {
-            scene.ChangeSceneTo("Begin");
+            scene.ChangeSceneTo("Loser");
             GameController.active_game = false;
 
         }
