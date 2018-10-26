@@ -4,8 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class backgroundUmi : MonoBehaviour {
+    public AudioSource audio;
     public RawImage background;
     public Texture[] images;
+    public Text puntaje_interfaz;
+    public Text active_text_help;
     private int count;
     private int puntaje;
     public float velocity = 0.001f;
@@ -18,7 +21,7 @@ public class backgroundUmi : MonoBehaviour {
     void Update() {
         if (GameController.active_game)
         {
-            
+            active_text_help.enabled = false;
             moveGround();
             changeTexture();
 
@@ -42,6 +45,7 @@ public class backgroundUmi : MonoBehaviour {
             background.texture = images[1];
         }
         else if (puntaje >= 3000) {
+            puntaje_interfaz.color = new Color(229, 229, 229);
             background.texture = images[2];
         }
         //count++;

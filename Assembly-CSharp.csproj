@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scrpits\Camara\SceneChanger.cs" />
     <Compile Include="Assets\Scrpits\Camara\SeguirPlayer.cs" />
     <Compile Include="Assets\Scrpits\Fondos\ChangeBackground.cs" />
+    <Compile Include="Assets\Scrpits\Fondos\MusicChange.cs" />
     <Compile Include="Assets\Scrpits\GameController.cs" />
     <Compile Include="Assets\Scrpits\Generadores\destroyer.cs" />
     <Compile Include="Assets\Scrpits\Generadores\generator.cs" />

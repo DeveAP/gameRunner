@@ -30,7 +30,7 @@ public class Running : MonoBehaviour {
         }
 	}
     public  void runningPlayer (int puntaje) {
-        if (puntaje % 1000 == 0)
+        if (puntaje % 500 == 0)
         {
             fase++;
             Debug.Log("Hrcho");
